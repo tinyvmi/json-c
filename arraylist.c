@@ -16,6 +16,10 @@
 #ifdef STDC_HEADERS
 # include <stdlib.h>
 # include <string.h>
+#else
+  #if defined(HAVE_STDLIB_H)
+  # include <stdlib.h>
+  #endif
 #endif /* STDC_HEADERS */
 
 #if defined(HAVE_STRINGS_H) && !defined(_STRING_H) && !defined(__USE_BSD)
